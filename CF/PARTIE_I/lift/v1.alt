@@ -1,0 +1,187 @@
+const NbFloor = 4;
+domain levels = [0, NbFloor-1];
+
+node Button 
+	state light : bool : public;
+	init light := false;
+	event   off, 
+			push : public; // action de l'utilisateur est non synchronisée.
+  	trans  
+  		true |- push -> light := true;
+        true |- off -> light := false;
+edon
+
+node Door
+	state 
+		closed : bool : public;
+		stucked : bool;
+	init 
+		closed := true;
+		stucked := false;
+	event 
+		open, close;
+	trans 
+		~stucked |- close -> closed := true;
+		~stucked |- open -> closed := false;
+		~stucked |- close -> stucked := true;
+		~stucked |- open -> stucked := true;
+		true |- close,open -> ;
+edon
+
+node Floor
+	sub	B : Button;
+		D : Door;
+	event open, close;
+	trans 
+		~D.closed |- close -> ;//retire la boucle qui n'a pas lieu d'être
+		D.closed |- open -> ;
+	sync
+		<B.off, D.close, close>;
+		<open, D.open>;
+edon
+
+/*
+node Lift
+	sub B : Button[NbFloor];
+		D : Door;
+	state 
+		position : 0;
+		move : [0,2]; // 0 : stopped, 1 : up, 2 : down
+	event up, down, stopped;
+	trans
+		// appel de supérieur + pas en train de descendre |- up -> move := 1, position := position +1;
+
+		// appel de inférieur + pas en train de monter |- down -> move := 2, position := position -1;
+		
+		B[position].light |- stopped -> move := 0;
+
+	synch
+		<stopped, B[position].off, D.open>
+edon
+*/
+
+node Lift
+	sub 
+		B : Button[NbFloor];
+		D : Door;
+	state
+		level : levels : public;
+	init
+		level := 0;
+	event 
+		close[NbFloor], open, down, up;
+	trans
+		~D.closed & level=0 |- close[0] -> ;
+		~D.closed & level=1 |- close[1] -> ;
+		~D.closed & level=2 |- close[2] -> ;
+		~D.closed & level=3 |- close[3] -> ;
+
+		D.closed |- open -> ;
+		D.closed |- down -> level := level -1;
+		D.closed |- up -> level := level +1;
+	sync
+		<close[0], B[0].off, D.close>;
+		<close[1], B[1].off, D.close>;
+		<close[2], B[2].off, D.close>;
+		<close[3], B[3].off, D.close>;
+		<open, D.open>;
+edon
+
+/*
+node Building
+	sub 
+		L : Lift;
+		F : Floor[NbFloor];
+
+	// utiliser flow non obligatoire -> lisibilité
+	flow 
+		request : bool[NbFloor] : private;
+		requestDown, requestUp : bool : private;
+	assert
+		request[0] = (F[0].B.light | L.B[0].light);
+		request[1] = (F[1].B.light | L.B[1].light);
+		request[2] = (F[2].B.light | L.B[2].light);
+		request[3] = (F[3].B.light | L.B[3].light);
+		requestDown = (request[0] & L.level>0 |
+					   request[1] & L.level>1 |
+					   request[2] & L.level>2 );
+		requestUp = (request[3] & L.level<3 |
+					 request[2] & L.level<2 |
+					 request[1] & L.level<1);
+	event
+		open[NbFloor], down, up;
+	trans 
+		L.level=0 & request[0] |- open[0] -> ;
+		L.level=1 & request[1] |- open[1] -> ;
+		L.level=2 & request[2] |- open[2] -> ;
+		L.level=3 & request[3] |- open[3] -> ;
+		requestUp |- up -> ;
+		requestDown |- down -> ;
+	sync
+		<F[0].close, L.close[0]>;
+		<F[1].close, L.close[1]>;
+		<F[2].close, L.close[2]>;
+		<F[3].close, L.close[3]>;
+		<open[0], F[0].open, L.open>;
+		<open[1], F[1].open, L.open>;
+		<open[2], F[2].open, L.open>;
+		<open[3], F[3].open, L.open>;
+		<down, L.down>;
+		<up, L.up>;
+edon
+*/
+
+node Building
+	sub 
+		L : Lift;
+		F : Floor[NbFloor];
+	state 
+		LastMoveIsUp : bool;
+	init
+		LastMoveIsUp := false;
+
+	// utiliser flow non obligatoire -> lisibilité
+	flow 
+		request : bool[NbFloor] : private;
+		requestDown, requestUp : bool : private;
+		doorsAreClosed : bool : private;
+	assert
+		request[0] = (F[0].B.light | L.B[0].light);
+		request[1] = (F[1].B.light | L.B[1].light);
+		request[2] = (F[2].B.light | L.B[2].light);
+		request[3] = (F[3].B.light | L.B[3].light);
+		requestDown = (request[0] & L.level>0 |
+					   request[1] & L.level>1 |
+					   request[2] & L.level>2 );
+		requestUp = (request[3] & L.level<3 |
+					 request[2] & L.level<2 |
+					 request[1] & L.level<1);
+		doorsAreClosed = ((L.level=0 & F[0].D.closed)|
+						  (L.level=1 & F[1].D.closed)|
+						  (L.level=2 & F[2].D.closed)|
+						  (L.level=3 & F[3].D.closed));
+
+	event
+		open[NbFloor] > {down, up};
+	trans 
+		L.level=0 & request[0] |- open[0] -> ;
+		L.level=1 & request[1] |- open[1] -> ;
+		L.level=2 & request[2] |- open[2] -> ;
+		L.level=3 & request[3] |- open[3] -> ;
+		doorsAreClosed & requestUp & LastMoveIsUp |- up -> ;
+		doorsAreClosed & requestUp & ~LastMoveIsUp & ~requestDown |- up -> LastMoveIsUp := true;
+
+		doorsAreClosed & requestDown & ~LastMoveIsUp |- down -> ;
+		doorsAreClosed & requestDown & LastMoveIsUp & ~requestUp |- down -> LastMoveIsUp :=false;
+	sync
+		<F[0].close, L.close[0]>;
+		<F[1].close, L.close[1]>;
+		<F[2].close, L.close[2]>;
+		<F[3].close, L.close[3]>;
+		<open[0], F[0].open, L.open>;
+		<open[1], F[1].open, L.open>;
+		<open[2], F[2].open, L.open>;
+		<open[3], F[3].open, L.open>;
+		<down, L.down>;
+		<up, L.up>;
+edon

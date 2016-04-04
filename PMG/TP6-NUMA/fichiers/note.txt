@@ -1,0 +1,9 @@
+distance doit être des multiples de 4.
+Le trafic causé par le faux partage peut faire couler l'efficacité de la machine.
+
+linesize = 64
+
+./test-line 64 1 2
+
+
+

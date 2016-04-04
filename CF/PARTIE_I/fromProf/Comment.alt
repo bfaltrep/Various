@@ -1,0 +1,7 @@
+// A comment that stops at the end of the line
+
+/* A 5 lines comment.
+ * No imbrication
+ *
+ *
+*/

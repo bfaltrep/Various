@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c,c_min,c_max≔1,1,1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="i_min,i_max≔1,1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="ArrayMinMaxSpec"/>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="MyArray"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="LOOP">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c &lt; size ∧ array(c+1)≤array(c_max) ∧ array(c+1)≥array(c_min)"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c≔c+1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="," org.eventb.core.identifier="c"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="c" org.eventb.core.predicate="c∈1‥size"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="c_min"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="c_max"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv1" org.eventb.core.predicate="c_min∈1‥size"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv2" org.eventb.core.predicate="c_max∈1‥size"/>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FOUND_MIN">
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_min≔c+1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="c &lt; size"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="array(c+1) &lt; array(c_min)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FOUND_MAX">
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_max≔c+1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="c &lt; size"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="array(c+1) &gt; array(c_max)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FINAL">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="FOUND_MIN_MAX"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="c=size"/>
+<org.eventb.core.witness name=")" org.eventb.core.label="minimum" org.eventb.core.predicate="minimum=c_min"/>
+<org.eventb.core.witness name="*" org.eventb.core.label="maximum" org.eventb.core.predicate="maximum=c_max"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="i_min,i_max≔c_min,c_max" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="i_min"/>
+<org.eventb.core.variable name="7" org.eventb.core.identifier="i_max"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="invDeLiaison" org.eventb.core.predicate="∀i·i∈1‥c ⇒ array(c_min)≤array(i)"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="invDeLiaison2" org.eventb.core.predicate="∀i·i∈1‥c ⇒ array(c_max)≥array(i)"/>
+</org.eventb.core.machineFile>

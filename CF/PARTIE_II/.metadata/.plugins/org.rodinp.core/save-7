@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<index_root>
+<pim project="/ArraySearch">
+<rodin_index>
+<descriptor element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray">
+<occurrence element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray" kind="org.eventb.core.declaration"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.seesContext#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.seesContext#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="array">
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="37" loc_char_start="32"/>
+<occurrence element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="48" loc_char_start="43"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="11"/>
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#*|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="19" loc_char_start="14"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="11"/>
+<occurrence element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.parameter#(" name="index">
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.parameter#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.witness#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.witness#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="6"/>
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch" name="LinearSearch">
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-" name="LOOP">
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+" name="FOUND">
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#*" name="NOTFOUND">
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#,|org.eventb.core.refinesEvent#)" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.variable#)" name="i">
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.witness#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="17"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#,|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="17"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.variable#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="4"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.invariant#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array" name="Array">
+<occurrence element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" name="size">
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.invariant#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#*|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="9"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="24" loc_char_start="20"/>
+<occurrence element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="11"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#,|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="val">
+<occurrence element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="25" loc_char_start="22"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="23" loc_char_start="20"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="13"/>
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#*|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="26" loc_char_start="23"/>
+</descriptor>
+<descriptor element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch" name="ArraySearch">
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch" kind="org.eventb.core.declaration"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.refinesMachine#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray" name="SortedArray">
+<occurrence element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#," name="NOTFOUND">
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)" name="FOUND">
+<occurrence element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+</rodin_index>
+<export_table>
+<export file="/ArraySearch/SortedArray.buc">
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="array"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" name="size"/>
+<exported element="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray" name="SortedArray"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="val"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+</export>
+<export file="/ArraySearch/ArraySearch.bum">
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="array"/>
+<exported element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch" name="ArraySearch"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" name="size"/>
+<exported element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="val"/>
+<exported element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#*" name="NOTFOUND"/>
+<exported element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)" name="FOUND"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+<exported element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch|org.eventb.core.event#)|org.eventb.core.parameter#(" name="index"/>
+</export>
+<export file="/ArraySearch/Array.buc">
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="array"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" name="size"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="val"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+</export>
+<export file="/ArraySearch/MyArray.buc">
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="array"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" name="size"/>
+<exported element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="val"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+</export>
+<export file="/ArraySearch/LinearSearch.bum">
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="array"/>
+<exported element="/ArraySearch/ArraySearch.bum|org.eventb.core.machineFile#ArraySearch" name="ArraySearch"/>
+<exported element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+" name="FOUND"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" name="size"/>
+<exported element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-" name="LOOP"/>
+<exported element="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="val"/>
+<exported element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch" name="LinearSearch"/>
+<exported element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.variable#)" name="i"/>
+<exported element="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#," name="NOTFOUND"/>
+<exported element="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+</export>
+</export_table>
+<graph is_sorted="true">
+<node label="/ArraySearch/Array.buc" mark="false" order_pos="0"/>
+<node label="/ArraySearch/SortedArray.buc" mark="false" order_pos="1">
+<predecessor label="/ArraySearch/Array.buc"/>
+</node>
+<node label="/ArraySearch/MyArray.buc" mark="false" order_pos="2">
+<predecessor label="/ArraySearch/Array.buc"/>
+</node>
+<node label="/ArraySearch/ArraySearch.bum" mark="false" order_pos="3">
+<predecessor label="/ArraySearch/MyArray.buc"/>
+</node>
+<node label="/ArraySearch/LinearSearch.bum" mark="false" order_pos="4">
+<predecessor label="/ArraySearch/ArraySearch.bum"/>
+<predecessor label="/ArraySearch/MyArray.buc"/>
+</node>
+</graph>
+<unprocessed file="/ArraySearch/Array.bcc"/>
+<unprocessed file="/ArraySearch/Array.bpo"/>
+<unprocessed file="/ArraySearch/Array.bpr"/>
+<unprocessed file="/ArraySearch/Array.bps"/>
+<unprocessed file="/ArraySearch/ArraySearch.bcm"/>
+<unprocessed file="/ArraySearch/ArraySearch.bpo"/>
+<unprocessed file="/ArraySearch/ArraySearch.bpr"/>
+<unprocessed file="/ArraySearch/ArraySearch.bps"/>
+<unprocessed file="/ArraySearch/SortedArray.bcc"/>
+<unprocessed file="/ArraySearch/SortedArray.bpo"/>
+<unprocessed file="/ArraySearch/SortedArray.bpr"/>
+<unprocessed file="/ArraySearch/SortedArray.bps"/>
+<unprocessed file="/ArraySearch/MyArray.bcc"/>
+<unprocessed file="/ArraySearch/MyArray.bpo"/>
+<unprocessed file="/ArraySearch/MyArray.bpr"/>
+<unprocessed file="/ArraySearch/MyArray.bps"/>
+<unprocessed file="/ArraySearch/MinMaxSearch.bcc"/>
+<unprocessed file="/ArraySearch/MinMaxSearch.bpo"/>
+<unprocessed file="/ArraySearch/MinMaxSearch.bpr"/>
+<unprocessed file="/ArraySearch/MinMaxSearch.bps"/>
+<unprocessed file="/ArraySearch/MinMax.bpr"/>
+<unprocessed file="/ArraySearch/MinMax.bcc"/>
+<unprocessed file="/ArraySearch/MinMax.bpo"/>
+<unprocessed file="/ArraySearch/MinMax.bps"/>
+<unprocessed file="/ArraySearch/ArrayMinMaxSearch.bcm"/>
+<unprocessed file="/ArraySearch/ArrayMinMaxSearch.bpo"/>
+<unprocessed file="/ArraySearch/ArrayMinMaxSearch.bpr"/>
+<unprocessed file="/ArraySearch/ArrayMinMaxSearch.bps"/>
+<unprocessed file="/ArraySearch/LinearSearch.bcm"/>
+<unprocessed file="/ArraySearch/LinearSearch.bpo"/>
+<unprocessed file="/ArraySearch/LinearSearch.bpr"/>
+<unprocessed file="/ArraySearch/LinearSearch.bps"/>
+</pim>
+<pim project="/Counter">
+<rodin_index>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#-" name="cpt1">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="19" loc_char_start="15"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.guard#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="10" loc_char_start="6"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#\/" name="cpt3">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#\/" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="9" loc_char_start="5"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="9"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.guard#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="26" loc_char_start="22"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="22" loc_char_start="18"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="9" loc_char_start="5"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="30" loc_char_start="26"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="31" loc_char_start="27"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="10"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter" name="DecimalCounter">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.constant#'" name="maxValue">
+<occurrence element="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="0"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.invariant#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="6"/>
+<occurrence element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="0"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="6"/>
+</descriptor>
+<descriptor element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6" name="INC2">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-" name="RESET">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.refinesEvent#*" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2" name="INC1">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext" name="CounterContext">
+<occurrence element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext" kind="org.eventb.core.declaration"/>
+<occurrence element="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification" name="CounterSpecification">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.refinesMachine#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification" name="MyCounterSpecification">
+<occurrence element="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification" kind="org.eventb.core.declaration"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.seesContext#3" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.seesContext#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#." name="cpt2">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="9" loc_char_start="5"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="9" loc_char_start="5"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="9"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="17" loc_char_start="13"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.guard#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="11"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="21" loc_char_start="17"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="9" loc_char_start="5"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounterContext.buc|org.eventb.core.contextFile#DecimalCounterContext" name="DecimalCounterContext">
+<occurrence element="/Counter/DecimalCounterContext.buc|org.eventb.core.contextFile#DecimalCounterContext" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.variable#*" name="cpt">
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.variable#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.action#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.invariant#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5" name="RESET">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#," name="INC">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.refinesEvent#(" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7" name="INC3">
+<occurrence element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+</rodin_index>
+<export_table>
+<export file="/Counter/CounterSpecification.bum">
+<exported element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-" name="RESET"/>
+<exported element="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification" name="MyCounterSpecification"/>
+<exported element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.variable#*" name="cpt"/>
+<exported element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.constant#'" name="maxValue"/>
+<exported element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification" name="CounterSpecification"/>
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext" name="CounterContext"/>
+<exported element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#," name="INC"/>
+</export>
+<export file="/Counter/CounterContext.buc">
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.constant#'" name="maxValue"/>
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext" name="CounterContext"/>
+</export>
+<export file="/Counter/MyCounterSpecification.buc">
+<exported element="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification" name="MyCounterSpecification"/>
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.constant#'" name="maxValue"/>
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext" name="CounterContext"/>
+</export>
+<export file="/Counter/DecimalCounter.bum">
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6" name="INC2"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#-" name="cpt1"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#\/" name="cpt3"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2" name="INC1"/>
+<exported element="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification" name="CounterSpecification"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter" name="DecimalCounter"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7" name="INC3"/>
+<exported element="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification" name="MyCounterSpecification"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.variable#." name="cpt2"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5" name="RESET"/>
+<exported element="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.constant#'" name="maxValue"/>
+<exported element="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext" name="CounterContext"/>
+</export>
+<export file="/Counter/DecimalCounterContext.buc">
+<exported element="/Counter/DecimalCounterContext.buc|org.eventb.core.contextFile#DecimalCounterContext" name="DecimalCounterContext"/>
+</export>
+</export_table>
+<graph is_sorted="true">
+<node label="/Counter/CounterContext.buc" mark="false" order_pos="0"/>
+<node label="/Counter/DecimalCounterContext.buc" mark="false" order_pos="1"/>
+<node label="/Counter/MyCounterSpecification.buc" mark="false" order_pos="2">
+<predecessor label="/Counter/CounterContext.buc"/>
+</node>
+<node label="/Counter/CounterSpecification.bum" mark="false" order_pos="3">
+<predecessor label="/Counter/MyCounterSpecification.buc"/>
+</node>
+<node label="/Counter/DecimalCounter.bum" mark="false" order_pos="4">
+<predecessor label="/Counter/CounterSpecification.bum"/>
+<predecessor label="/Counter/MyCounterSpecification.buc"/>
+</node>
+</graph>
+<unprocessed file="/Counter/CounterContext.bcc"/>
+<unprocessed file="/Counter/CounterContext.bpo"/>
+<unprocessed file="/Counter/CounterContext.bpr"/>
+<unprocessed file="/Counter/CounterContext.bps"/>
+<unprocessed file="/Counter/CounterSpecification.bcm"/>
+<unprocessed file="/Counter/CounterSpecification.bpo"/>
+<unprocessed file="/Counter/CounterSpecification.bpr"/>
+<unprocessed file="/Counter/CounterSpecification.bps"/>
+<unprocessed file="/Counter/MyCounterSpecification.bcc"/>
+<unprocessed file="/Counter/MyCounterSpecification.bpo"/>
+<unprocessed file="/Counter/MyCounterSpecification.bpr"/>
+<unprocessed file="/Counter/MyCounterSpecification.bps"/>
+<unprocessed file="/Counter/DecimalCounter.bcc"/>
+<unprocessed file="/Counter/DecimalCounter.bpo"/>
+<unprocessed file="/Counter/DecimalCounter.bpr"/>
+<unprocessed file="/Counter/DecimalCounter.bps"/>
+<unprocessed file="/Counter/DecimalCounter.bcm"/>
+<unprocessed file="/Counter/DecimalCounterContext.bcc"/>
+<unprocessed file="/Counter/DecimalCounterContext.bpo"/>
+<unprocessed file="/Counter/DecimalCounterContext.bpr"/>
+<unprocessed file="/Counter/DecimalCounterContext.bps"/>
+<unprocessed file="/Counter/CounterSpecification.bpo_tmp"/>
+</pim>
+<pim project="/ArraySearchMinMax">
+<rodin_index>
+<descriptor element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array" name="Array">
+<occurrence element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array" kind="org.eventb.core.declaration"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#7" name="i_max">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="6"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#7" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="6"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.parameter#)" name="maximum">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.witness#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="38" loc_char_start="31"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.parameter#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.witness#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.action#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="30" loc_char_start="23"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5" name="FOUND_MAX">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec" name="ArrayMinMaxSpec">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.refinesMachine#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3" name="FINAL">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.variable#-" name="i_max">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.variable#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.action#." kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="6"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="7"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#7" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="size">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="8"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="8"/>
+<occurrence element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="7"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="7"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="10"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="4"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="6" loc_char_start="2"/>
+<occurrence element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#0" name="c_max">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.action#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="23" loc_char_start="18"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.witness#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="8"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="33" loc_char_start="28"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="24" loc_char_start="19"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="22" loc_char_start="17"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="8"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.seesContext#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.seesContext#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#," name="c">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="7"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="7"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="2"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="6"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="6"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="44" loc_char_start="43"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="17"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#6" name="i_min">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#6" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4" name="FOUND_MIN">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.parameter#(" name="minimum">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.witness#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="38" loc_char_start="31"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.witness#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.action#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="21" loc_char_start="14"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.parameter#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="array">
+<occurrence element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="30" loc_char_start="25"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="19" loc_char_start="14"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="30" loc_char_start="25"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="19" loc_char_start="14"/>
+<occurrence element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="11"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="29" loc_char_start="24"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="42" loc_char_start="37"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="53" loc_char_start="48"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="11"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="27" loc_char_start="22"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="11"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="29" loc_char_start="24"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="13"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="13"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear" name="ArrayMinMaxLinear">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.variable#," name="i_min">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.variable#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.action#." kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#6" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#\/" name="c_min">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#\/" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.action#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="17" loc_char_start="12"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="0"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="59" loc_char_start="54"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.witness#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="8"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="24" loc_char_start="19"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="2"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="22" loc_char_start="17"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(" name="FOUND_MIN_MAX">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+" name="LOOP">
+<occurrence element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+</rodin_index>
+<export_table>
+<export file="/ArraySearchMinMax/ArrayMinMaxSpec.bum">
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.parameter#)" name="maximum"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="array"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.variable#," name="i_min"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="size"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.variable#-" name="i_max"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec" name="ArrayMinMaxSpec"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.parameter#(" name="minimum"/>
+<exported element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(" name="FOUND_MIN_MAX"/>
+</export>
+<export file="/ArraySearchMinMax/ArrayMinMaxLinear.bum">
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#0" name="c_max"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#," name="c"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#\/" name="c_min"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="array"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#3" name="FINAL"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#4" name="FOUND_MIN"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#+" name="LOOP"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#5" name="FOUND_MAX"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="size"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec" name="ArrayMinMaxSpec"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#7" name="i_max"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.variable#6" name="i_min"/>
+<exported element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear" name="ArrayMinMaxLinear"/>
+<exported element="/ArraySearchMinMax/ArrayMinMaxLinear.bum|org.eventb.core.machineFile#ArrayMinMaxLinear|org.eventb.core.event#'" name="INITIALISATION"/>
+</export>
+<export file="/ArraySearchMinMax/MyArray.buc">
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="array"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="size"/>
+<exported element="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray" name="MyArray"/>
+</export>
+<export file="/ArraySearchMinMax/Array.buc">
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array" name="Array"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" name="array"/>
+<exported element="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" name="size"/>
+</export>
+</export_table>
+<graph is_sorted="true">
+<node label="/ArraySearchMinMax/ArraySearch.bum" mark="false" order_pos="0"/>
+<node label="/ArraySearchMinMax/Array.buc" mark="false" order_pos="1"/>
+<node label="/ArraySearchMinMax/MyArray.buc" mark="false" order_pos="2">
+<predecessor label="/ArraySearchMinMax/Array.buc"/>
+</node>
+<node label="/ArraySearchMinMax/ArrayMinMaxSpec.bum" mark="false" order_pos="3">
+<predecessor label="/ArraySearchMinMax/MyArray.buc"/>
+</node>
+<node label="/ArraySearchMinMax/ArrayMinMaxLinear.bum" mark="false" order_pos="4">
+<predecessor label="/ArraySearchMinMax/ArrayMinMaxSpec.bum"/>
+<predecessor label="/ArraySearchMinMax/MyArray.buc"/>
+</node>
+</graph>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSearch.bpr"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSearch.bcm"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSearch.bpo"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSearch.bps"/>
+<unprocessed file="/ArraySearchMinMax/Array.bcc"/>
+<unprocessed file="/ArraySearchMinMax/Array.bpo"/>
+<unprocessed file="/ArraySearchMinMax/Array.bpr"/>
+<unprocessed file="/ArraySearchMinMax/Array.bps"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSpec.bpr"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSpec.bcm"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSpec.bpo"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxSpec.bps"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxComputation.bcm"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxComputation.bpo"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxComputation.bpr"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxComputation.bps"/>
+<unprocessed file="/ArraySearchMinMax/MyArray.bcc"/>
+<unprocessed file="/ArraySearchMinMax/MyArray.bpo"/>
+<unprocessed file="/ArraySearchMinMax/MyArray.bpr"/>
+<unprocessed file="/ArraySearchMinMax/MyArray.bps"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxComputation.bpo_tmp"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxLinear.bpr"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxLinear.bcm"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxLinear.bpo"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxLinear.bps"/>
+<unprocessed file="/ArraySearchMinMax/ArrayMinMaxLinear.bpo_tmp"/>
+</pim>
+<pim project="/Projet_Rodin">
+<rodin_index>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+" name="DEMARRAGE_DU_BUS">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/MonBus.buc|org.eventb.core.contextFile#MonBus" name="MonBus">
+<occurrence element="/Projet_Rodin/MonBus.buc|org.eventb.core.contextFile#MonBus" kind="org.eventb.core.declaration"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.seesContext#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers">
+<occurrence element="/Projet_Rodin/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2" name="ARRIVEE_D_UN_USAGER">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#)" name="max_usagers">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#7" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="59" loc_char_start="48"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="34" loc_char_start="23"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="31" loc_char_start="20"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="36" loc_char_start="25"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#6" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="33" loc_char_start="22"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager" name="Usager">
+<occurrence element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager" kind="org.eventb.core.declaration"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.seesContext#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#inv2" name="compteur_usagers_a_l_arret">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="89" loc_char_start="63"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="46" loc_char_start="20"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="26" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#inv2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#inv3" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="26" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="26" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*" name="ARRET_DU_BUS">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#)" name="veut_descendre">
+<occurrence element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#." name="nb_usagers_dans_le_bus">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#inv1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="22" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#7" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="22" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.action#grd4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="42" loc_char_start="20"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+|org.eventb.core.guard#grd2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="49" loc_char_start="27"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.guard#grd2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="22" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1|org.eventb.core.guard#grd1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="22" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1" name="DESCENTE_D_UN_USAGER">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#," name="nb_usagers_a_venir">
+<occurrence element="/Projet_Rodin/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers|org.eventb.core.axiom#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="47" loc_char_start="29"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus" name="Arret_bus">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#4" name="usagers_a_l_arret">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="17" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="17" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#6" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="17" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.action#grd4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="63" loc_char_start="46"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#4" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.carrierSet#+" name="set1">
+<occurrence element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.carrierSet#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#8" name="nb_usagers_a_l_arret">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+|org.eventb.core.guard#grd2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="20" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="20" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="20" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#7" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="45" loc_char_start="25"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.action#grd4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="84" loc_char_start="64"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#8" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#," name="bus_a_l_arret">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+|org.eventb.core.guard#grd1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+|org.eventb.core.action#act1" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0" name="MONTEE_D_UN_USAGER">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#'" name="priorite">
+<occurrence element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#3" name="usagers_dans_le_bus">
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.action#grd4" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="19" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.action#grd4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="19" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#3" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="19" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers" name="MesUsagers">
+<occurrence element="/Projet_Rodin/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers" kind="org.eventb.core.declaration"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.seesContext#inv4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Usager">
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="21" loc_char_start="15"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#0" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="30" loc_char_start="24"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="40" loc_char_start="34"/>
+</descriptor>
+<descriptor element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#*" name="usagers_a_venir">
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="62" loc_char_start="47"/>
+<occurrence element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+</rodin_index>
+<export_table>
+<export file="/Projet_Rodin/Usagers.buc">
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#)" name="max_usagers"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Usager"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#," name="nb_usagers_a_venir"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#*" name="usagers_a_venir"/>
+</export>
+<export file="/Projet_Rodin/MesUsagers.buc">
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#)" name="max_usagers"/>
+<exported element="/Projet_Rodin/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers" name="MesUsagers"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Usager"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#," name="nb_usagers_a_venir"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#*" name="usagers_a_venir"/>
+</export>
+<export file="/Projet_Rodin/MonBus.buc">
+<exported element="/Projet_Rodin/MonBus.buc|org.eventb.core.contextFile#MonBus" name="MonBus"/>
+</export>
+<export file="/Projet_Rodin/Usager.buc">
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#)" name="veut_descendre"/>
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#'" name="priorite"/>
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.carrierSet#+" name="set1"/>
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager" name="Usager"/>
+</export>
+<export file="/Projet_Rodin/Arret_bus.bum">
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#8" name="nb_usagers_a_l_arret"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+" name="DEMARRAGE_DU_BUS"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#inv2" name="compteur_usagers_a_l_arret"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus" name="Arret_bus"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2" name="ARRIVEE_D_UN_USAGER"/>
+<exported element="/Projet_Rodin/MonBus.buc|org.eventb.core.contextFile#MonBus" name="MonBus"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Usager"/>
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.carrierSet#+" name="set1"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#*" name="usagers_a_venir"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#4" name="usagers_a_l_arret"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0" name="MONTEE_D_UN_USAGER"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#)" name="max_usagers"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*" name="ARRET_DU_BUS"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1" name="DESCENTE_D_UN_USAGER"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#." name="nb_usagers_dans_le_bus"/>
+<exported element="/Projet_Rodin/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers" name="MesUsagers"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#," name="bus_a_l_arret"/>
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#)" name="veut_descendre"/>
+<exported element="/Projet_Rodin/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#," name="nb_usagers_a_venir"/>
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager|org.eventb.core.constant#'" name="priorite"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.variable#3" name="usagers_dans_le_bus"/>
+<exported element="/Projet_Rodin/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/Projet_Rodin/Usager.buc|org.eventb.core.contextFile#Usager" name="Usager"/>
+</export>
+</export_table>
+<graph is_sorted="true">
+<node label="/Projet_Rodin/Usagers.buc" mark="false" order_pos="0"/>
+<node label="/Projet_Rodin/Bus.buc" mark="false" order_pos="1"/>
+<node label="/Projet_Rodin/Usager.buc" mark="false" order_pos="2"/>
+<node label="/Projet_Rodin/MesUsagers.buc" mark="false" order_pos="3">
+<predecessor label="/Projet_Rodin/Usagers.buc"/>
+</node>
+<node label="/Projet_Rodin/MonBus.buc" mark="false" order_pos="4">
+<predecessor label="/Projet_Rodin/Bus.buc"/>
+</node>
+<node label="/Projet_Rodin/Arret_bus.bum" mark="false" order_pos="5">
+<predecessor label="/Projet_Rodin/MonBus.buc"/>
+<predecessor label="/Projet_Rodin/MesUsagers.buc"/>
+<predecessor label="/Projet_Rodin/Usager.buc"/>
+</node>
+</graph>
+</pim>
+<pim project="/Projet_Rodin_2">
+<rodin_index>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*" name="ARRET_DU_BUS">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers">
+<occurrence element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers" kind="org.eventb.core.declaration"/>
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.seesContext#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Projet_Rodin_2/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2" name="ARRIVEE_D_UN_USAGER">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+" name="DEMARRAGE_DU_BUS">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus|org.eventb.core.constant#'" name="capacite_max">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="44" loc_char_start="32"/>
+<occurrence element="/Projet_Rodin_2/MonBus.buc|org.eventb.core.contextFile#MonBus|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#var4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="6"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/MonBus.buc|org.eventb.core.contextFile#MonBus" name="MonBus">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.seesContext#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Projet_Rodin_2/MonBus.buc|org.eventb.core.contextFile#MonBus" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers" name="MesUsagers">
+<occurrence element="/Projet_Rodin_2/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Us">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.invariant#var4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="23" loc_char_start="21"/>
+<occurrence element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.parameter#)" name="u">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.parameter#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="22" loc_char_start="21"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0" name="MONTEE_D_UN_USAGER">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus" name="Arret_bus">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1" name="DESCENTE_D_UN_USAGER">
+<occurrence element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus" name="Bus">
+<occurrence element="/Projet_Rodin_2/MonBus.buc|org.eventb.core.contextFile#MonBus|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus" kind="org.eventb.core.declaration"/>
+</descriptor>
+</rodin_index>
+<export_table>
+<export file="/Projet_Rodin_2/Arret_bus.bum">
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#+" name="DEMARRAGE_DU_BUS"/>
+<exported element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers"/>
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#2" name="ARRIVEE_D_UN_USAGER"/>
+<exported element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus|org.eventb.core.constant#'" name="capacite_max"/>
+<exported element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus" name="Bus"/>
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0" name="MONTEE_D_UN_USAGER"/>
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#*" name="ARRET_DU_BUS"/>
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#1" name="DESCENTE_D_UN_USAGER"/>
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus" name="Arret_bus"/>
+<exported element="/Projet_Rodin_2/Arret_bus.bum|org.eventb.core.machineFile#Arret_bus|org.eventb.core.event#0|org.eventb.core.parameter#)" name="u"/>
+<exported element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Us"/>
+<exported element="/Projet_Rodin_2/MonBus.buc|org.eventb.core.contextFile#MonBus" name="MonBus"/>
+</export>
+<export file="/Projet_Rodin_2/MesUsagers.buc">
+<exported element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers"/>
+<exported element="/Projet_Rodin_2/MesUsagers.buc|org.eventb.core.contextFile#MesUsagers" name="MesUsagers"/>
+<exported element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Us"/>
+</export>
+<export file="/Projet_Rodin_2/MonBus.buc">
+<exported element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus|org.eventb.core.constant#'" name="capacite_max"/>
+<exported element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus" name="Bus"/>
+<exported element="/Projet_Rodin_2/MonBus.buc|org.eventb.core.contextFile#MonBus" name="MonBus"/>
+</export>
+<export file="/Projet_Rodin_2/Bus.buc">
+<exported element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus|org.eventb.core.constant#'" name="capacite_max"/>
+<exported element="/Projet_Rodin_2/Bus.buc|org.eventb.core.contextFile#Bus" name="Bus"/>
+</export>
+<export file="/Projet_Rodin_2/Usagers.buc">
+<exported element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers" name="Usagers"/>
+<exported element="/Projet_Rodin_2/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#." name="Us"/>
+</export>
+</export_table>
+<graph is_sorted="true">
+<node label="/Projet_Rodin_2/Bus.buc" mark="false" order_pos="0"/>
+<node label="/Projet_Rodin_2/Usagers.buc" mark="false" order_pos="1"/>
+<node label="/Projet_Rodin_2/MonBus.buc" mark="false" order_pos="2">
+<predecessor label="/Projet_Rodin_2/Bus.buc"/>
+</node>
+<node label="/Projet_Rodin_2/MesUsagers.buc" mark="false" order_pos="3">
+<predecessor label="/Projet_Rodin_2/Usagers.buc"/>
+</node>
+<node label="/Projet_Rodin_2/Arret_bus.bum" mark="false" order_pos="4">
+<predecessor label="/Projet_Rodin_2/MonBus.buc"/>
+<predecessor label="/Projet_Rodin_2/Usagers.buc"/>
+</node>
+</graph>
+</pim>
+<delta_list/>
+<indexer_registry>
+<registry_entry element_type="org.eventb.core.machineFile">
+<indexer id="machineIndexer"/>
+</registry_entry>
+<registry_entry element_type="org.eventb.core.contextFile">
+<indexer id="contextIndexer"/>
+</registry_entry>
+</indexer_registry>
+</index_root>

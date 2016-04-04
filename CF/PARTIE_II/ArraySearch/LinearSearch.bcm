@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/ArraySearch/ArraySearch.bcm" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.refinesMachine#("/>
+<org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/ArraySearch/MyArray.bcc" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.seesContext#."/>
+<org.eventb.core.scInternalContext name="Array">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="val∈ℤ" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="size∈ℕ1" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="array∈1 ‥ size → ℤ" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="array" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.scConstant name="size" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="val" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="MyArray">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/ArraySearch/Array.bcc|org.eventb.core.scContextFile#Array" org.eventb.core.source="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="Arraz" org.eventb.core.label="axm1" org.eventb.core.predicate="size=2" org.eventb.core.source="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Arra{" org.eventb.core.label="axm2" org.eventb.core.predicate="val=0" org.eventb.core.source="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Arra|" org.eventb.core.label="axm3" org.eventb.core.predicate="array(1)=1" org.eventb.core.source="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Arra}" org.eventb.core.label="axm4" org.eventb.core.predicate="array(2)=0" org.eventb.core.source="/ArraySearch/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="MyArraz" org.eventb.core.label="inv1" org.eventb.core.predicate="i∈1 ‥ size+1" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.invariant#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="i" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.variable#)" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scEvent name="MyArra{" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/ArraySearch/ArraySearch.bcm|org.eventb.core.scMachineFile#ArraySearch|org.eventb.core.scEvent#MyArraz" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="i ≔ 1" org.eventb.core.label="act1" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#'|org.eventb.core.action#'"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="MyArra|" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FOUND" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/ArraySearch/ArraySearch.bcm|org.eventb.core.scMachineFile#ArraySearch|org.eventb.core.scEvent#MyArra{" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.refinesEvent#'"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="i≤size∧array(i)=val" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scWitness name=")" org.eventb.core.label="index" org.eventb.core.predicate="index=i" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#+|org.eventb.core.witness#)"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="MyArra}" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NOTFOUND" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#,">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/ArraySearch/ArraySearch.bcm|org.eventb.core.scMachineFile#ArraySearch|org.eventb.core.scEvent#MyArra\|" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#,|org.eventb.core.refinesEvent#)"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="i=size+1" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#,|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="MyArra~" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="LOOP" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="i≤size∧array(i)≠val" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="i ≔ i+1" org.eventb.core.label="act1" org.eventb.core.source="/ArraySearch/LinearSearch.bum|org.eventb.core.machineFile#LinearSearch|org.eventb.core.event#-|org.eventb.core.action#("/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

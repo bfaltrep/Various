@@ -1,0 +1,14 @@
+node A
+  state a : bool;
+edon
+node B
+  sub A1 : A;
+  state b : bool;
+  init b:= true, A1.a := false;
+edon
+node C
+  sub A2 : A;
+      B1 : B;
+  state c : bool;
+  init A2.a := true, B1.b := false, B1.A1.a := true;
+edon

@@ -1,0 +1,10 @@
+node SchedulerPriority
+  sub    PJ : PoolOfJobs[3];
+  event  run[3];
+  trans  true |- run[0] -> ;
+         PJ[0].nbJobs=0 |- run[1] -> ;
+         PJ[0].nbJobs=0 & PJ[1].nbJobs=0 |- run[2] -> ;
+  sync   <run[0], PJ[0].get>;
+         <run[1], PJ[1].get>;
+         <run[2], PJ[2].get>;
+edon

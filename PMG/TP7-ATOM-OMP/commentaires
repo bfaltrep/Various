@@ -1,0 +1,33 @@
+./bin/atoms -v --omp 0 -i 10 -n 1k -R -o 0 ./conf/choc1.conf
+
+./bin/atoms -v --omp 0 -i 10 -n 1k -R ./conf/choc1.conf
+
+-------------- INITIAL ------------------
+[PERF]    #atoms	time/i (µs)	Matoms/i/s
+[PERF]      1000	        761	       1.3
+[PERF] Detailed performance report for device [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+[PERF]   Kernel <lennard_jones> performed in 664.913025 µs
+[PERF]   Kernel <update_position> performed in 39.182003 µs
+[PERF]   All kernels performed in 704.095032 µs with 1.4 Matoms/i/s
+
+
+
+-------------- avec for schedule (guided,1) ------------------
+[PERF]    #atoms	time/i (µs)	Matoms/i/s
+[PERF]      1000	        797	       1.3
+[PERF] Detailed performance report for device [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+[PERF]   Kernel <lennard_jones> performed in 610.854004 µs
+[PERF]   Kernel <update_position> performed in 176.146011 µs
+[PERF]   All kernels performed in 787.000000 µs with 1.3 Matoms/i/s
+
+
+-------------- avec for schedule (dynamic,1) ------------------
+[PERF]    #atoms	time/i (µs)	Matoms/i/s
+[PERF]      1000	        787	       1.3
+[PERF] Detailed performance report for device [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+[PERF]   Kernel <lennard_jones> performed in 608.410034 µs
+[PERF]   Kernel <update_position> performed in 30.592001 µs
+[PERF]   All kernels performed in 639.002014 µs with 1.6 Matoms/i/s
+
+-------------- avec for schedule (static,1) ------------------
+

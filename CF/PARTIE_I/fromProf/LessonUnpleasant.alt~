@@ -1,0 +1,19 @@
+node LessonUnpleasant
+ sub  T : Teacher;
+      S1, S2, S3 : Student;
+ sync <T.speaks,S1.listen,S2.listen,S3.listen>;
+      <T.speaks,S1.listen,S2.listen>;
+      <T.speaks,S1.listen,S3.listen>;
+      <T.speaks,S2.listen,S3.listen>;
+      <T.speaks,S1.listen>;
+      <T.speaks,S2.listen>;
+      <T.speaks,S3.listen>;
+      <T.speaks>;
+      <T.paper,S1.write,S2.write>;
+      <T.paper,S1.write,S3.write>;
+      <T.paper,S2.write,S3.write>;
+      <T.paper,S1.write>;
+      <T.paper,S2.write>;
+      <T.paper,S3.write>;
+      <T.paper>;
+edon

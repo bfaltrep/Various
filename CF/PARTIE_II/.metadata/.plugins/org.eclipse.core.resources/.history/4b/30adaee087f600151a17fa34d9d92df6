@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="max_usagers ∈ ℕ"/>
+<org.eventb.core.constant name=")" org.eventb.core.identifier="max_usagers"/>
+<org.eventb.core.constant name="*" org.eventb.core.identifier="usagers_a_venir"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="usagers_a_venir ∈ 0‥max_usagers → Usager"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="nb_usagers_a_venir"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="nb_usagers_a_venir ∈ 0‥max_usagers"/>
+<org.eventb.core.carrierSet name="." org.eventb.core.identifier="Usager"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="fonction" org.eventb.core.predicate="priorite ∈ ℕ ⤖ Usager"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm4" org.eventb.core.predicate="veut_descendre ∈ BOOL ⤖ Usager"/>
+</org.eventb.core.contextFile>

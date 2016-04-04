@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poIdentifier name="array" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="size" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="val" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ArraySearch/Array.bpo|org.eventb.core.poFile#Array|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="val∈ℤ" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="size∈ℕ1" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="array∈1 ‥ size → ℤ" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#,"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,102 @@
+with Building do
+	deadlock := any_s - src( any_t - self_epsilon);
+	notResetable := any_s - coreach(initial, any_t);
+
+/*
+any_s = états accessibles depuis l'état initial
+any_t = transitions accessibles depuis l'état initial
+*/
+
+
+
+
+		/*
+			propriétés de sureté
+				doit être à 0 pour confirmer que le modèle est correct.
+		*/
+	/*
+		P1 : when a button is push, it lights.
+		P1 : if (a butoon is push) then (it lights)
+
+
+	*/
+	notP1 := 	(tgt(label F[0].B.push) - [F[0].B.light])|
+				(tgt(label F[1].B.push) - [F[1].B.light])|
+				(tgt(label F[2].B.push) - [F[2].B.light])|
+				(tgt(label F[3].B.push) - [F[3].B.light])|
+
+				(tgt(label L.B[0].push) - [L.B[0].light])|
+				(tgt(label L.B[1].push) - [L.B[1].light])|
+				(tgt(label L.B[2].push) - [L.B[2].light])|
+				(tgt(label L.B[3].push) - [L.B[3].light]);
+
+	/*
+		P2 : When the corresponding service is done, it lights off.
+		P2 : if (service is done) then (light off)
+
+		notP2  := tgt(label F[0].D.close) - [~F[0].B.light & ~L.B[0].light; 
+				équivaut à
+		notP2 := tgt(label F[0].D.close) & [F[0].B.light | L.B[0].light]
+	*/
+notP2  := 	(tgt(label F[0].D.close) & [F[0].B.light | L.B[0].light]) |
+			(tgt(label F[1].D.close) & [F[1].B.light | L.B[1].light]) |
+			(tgt(label F[2].D.close) & [F[2].B.light | L.B[2].light]) |
+			(tgt(label F[3].D.close) & [F[3].B.light | L.B[3].light]) ;
+
+	/*
+		P3 : At each floor, the door is close if the lift is not here.
+		P3 : if (lift is not at one floor) then (the floor is closed)
+	*/
+	notP3 := 	any_s & ([L.level != 0] - [F[0].D.closed]) |
+				any_s & ([L.level != 1] - [F[1].D.closed]) |
+				any_s & ([L.level != 2] - [F[2].D.closed]) |
+				any_s & ([L.level != 3] - [F[3].D.closed]) ;
+
+	tr_notP3 := trace(initial, any_t, notP3);
+
+	/*
+		P5 : The software opens the door at some floor only if there is some requests for that floor.
+		P5 : if (there is not some request for a floor) then (software do not open the door of the floor)
+
+		src(label F[0].D.open) - [F[0].B.light | L.B[0].light]
+		équivaut à
+		label F[0].D.open - rsrc([F[0].B.light | L.B[0].light])
+	*/
+	notP5 := 	any_t & (label F[0].D.open - rsrc([F[0].B.light | L.B[0].light])) |
+				any_t & (label F[1].D.open - rsrc([F[1].B.light | L.B[1].light])) |
+				any_t & (label F[2].D.open - rsrc([F[2].B.light | L.B[2].light])) |
+				any_t & (label F[3].D.open - rsrc([F[3].B.light | L.B[3].light])) ;
+
+	/*
+		P6 : If there is no request, the lift must stay at the same floor.
+		P6 : if (no request) then (lift don't move)
+		ou
+		P6 : if(the lift can move) then (there is a request)   (!A  -> !B)
+	*/
+	notP6 := any_t & (label L.down | label L.up) - rsrc([request[0]|request[1]|request[2]|request[3]]);
+
+	/*
+		P7 : When the lift moves, it must stop where there is a request.
+		P7 : if (lift is at "i" + request for "i") then (lift must stop)
+		P7 : if( the lift can move) then (there is no request where the lift is)
+	*/
+	notP7 := any_t & 
+	(label L.down | label L.up) & 
+	rsrc([  (L.level=0 & request[0])|
+			(L.level=1 & request[1])|
+			(L.level=2 & request[2])|
+			(L.level=3 & request[3])]);
+
+	tr_notP7 := trace(initial,any_t,src(notP7));
+	
+	/*
+		P8 : When there are several requests, the software must (if necessary) continue in the same direction than its last move.
+		P8 : if ( there are several request) then (the software must continue)
+		P8 : if(the software have to make a choice) then problem
+	*/
+	//notP8 := src (label L.up) & src (label L.down);
+	notP8 := any_t & ((label L.up & rsrc(src(label L.down)))|
+			 (label L.down & rsrc(src(label L.up))));
+
+	tr_notP8 := trace(initial, any_t, src(notP8));
+done

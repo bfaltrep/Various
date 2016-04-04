@@ -1,0 +1,207 @@
+// commande méconnue : modes() dans l'onglet graph
+
+//about each valve
+const maxDebit = 2;
+domain debits = [0, maxDebit];
+
+//about the tank's holes
+const maxInDebit = 4;
+const maxOutDebit = 2;
+
+//about the tank
+const nbSensors = 4;
+domain levels = [0, nbSensors+1];
+
+
+node Valve
+     state
+            debit: debits: public;
+            broken: bool: public;
+     init
+        debit := 0;
+            broken := false;
+     event
+        inc, //signal envoyé par le controleur
+        dec; //signal envoyé par le controleur
+     trans
+        ~broken|-inc -> debit := debit+1;
+        ~broken|-dec -> debit := debit-1;
+        ~broken & debit=0 |- dec -> ;
+            ~broken & debit=maxDebit |- inc -> ;
+        ~broken|-inc, dec -> broken := true;
+            broken |- inc, dec -> ;
+edon
+
+/*
+node Sensor
+     state
+        valide : bool;
+            levelWater: levels: public;
+     init
+        levelWater := 0;
+edon
+*/
+
+node Tank
+     state
+            levelWater: levels: public;
+     init
+        levelWater := nbSensors/2;
+    flow
+            input : [0,maxInDebit];
+        output : [0, maxOutDebit];
+    event
+        time
+    trans
+input>output |- time -> levelWater := levelWater+1;
+input<output |- time -> levelWater := levelWater -1;
+input=output |- time -> ;
+input=output & input !=0 |- time -> levelWater := levelWater -1;
+input=output & input !=0 |- time -> levelWater := levelWater +1;
+/*to avoid deadlock*/
+input>output & levelWater=nbSensors |- time -> ;
+input <output & levelWater=0 |- time -> ;
+edon
+
+node Ctrl
+edon
+
+/*
+node NoCtrl
+    flow
+        debit : [0,maxOutDebit][3];
+        level : [0, nbSensors];
+    event
+        ddd, ddi, ddn, did, dii, din, dnd, dni, dnn,
+        idd, idi, idn, iid, iii, iin, ind, ini, inn,
+        ndd, ndi, ndn, nid, nii, nin, nnd, nni, nnn;
+    trans
+        true |- ddd, ddi, ddn, did, dii, din, dnd, dni, dnn,
+                  idd, idi, idn, iid, iii, iin, ind, ini, inn,
+                  ndd, ndi, ndn, nid, nii, nin, nnd, nni, nnn
+                  -> ;
+edon
+*/
+
+
+/*
+ * This node is the result of the projection of the node 'System'
+ * on its subnode 'NoCtrl'.
+ */
+node Ctrl1
+ flow
+  debit : [0, 2][3];
+  level : [0, 4];
+ event
+  nnn;
+  nni;
+  nnd;
+  nin;
+  nii;
+  nid;
+  ndn;
+  ndi;
+  ndd;
+  inn;
+  ini;
+  ind;
+  iin;
+  iii;
+  iid;
+  idn;
+  idi;
+  idd;
+  dnn;
+  dni;
+  dnd;
+  din;
+  dii;
+  did;
+  ddn;
+  ddi;
+  ddd;
+/* Existential transitions */
+ /* no transition */
+/* Universal transitions */
+ trans
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- ddd -> ;
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- ddi -> ;
+  ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and 2<=level and level<=3) and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or 0<=debit[1] and debit[1]<=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and level=1 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=0 and level=3 and debit[2]=2) and debit[0]=1 |- ddn -> ;
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- did -> ;
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- dii -> ;
+  ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and 2<=level and level<=3) and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or 0<=debit[1] and debit[1]<=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and level=1 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=0 and level=3 and debit[2]=2) and debit[0]=1 |- din -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1) and debit[0]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2 and debit[0]=1 |- dnd -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1) and debit[0]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2 and debit[0]=1 |- dni -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or level=2 or debit[1]=0 and level=3) and debit[2]=1 or (1<=debit[1] and debit[1]<=2 and level=2 or 0<=debit[1] and debit[1]<=1 and level=3) and debit[2]=2) and debit[0]=0 or (level=1 and debit[2]=0 or (1<=debit[1] and debit[1]<=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=1 or (debit[1]=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2) and debit[0]=1 |- dnn -> ;
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- idd -> ;
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- idi -> ;
+  ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and 2<=level and level<=3) and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or 0<=debit[1] and debit[1]<=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and level=1 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=0 and level=3 and debit[2]=2) and debit[0]=1 |- idn -> ;
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- iid -> ;
+  debit[1]=0 and 1<=level and level<=3 and debit[2]=0 and debit[0]=0 |- iii -> ;
+  ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and 2<=level and level<=3) and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or 0<=debit[1] and debit[1]<=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and level=1 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=0 and level=3 and debit[2]=2) and debit[0]=1 |- iin -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1) and debit[0]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2 and debit[0]=1 |- ind -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1) and debit[0]=0 or (debit[1]=2 and level=1 or debit[1]=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2 and debit[0]=1 |- ini -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or level=2 or debit[1]=0 and level=3) and debit[2]=1 or (1<=debit[1] and debit[1]<=2 and level=2 or 0<=debit[1] and debit[1]<=1 and level=3) and debit[2]=2) and debit[0]=0 or (level=1 and debit[2]=0 or (1<=debit[1] and debit[1]<=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=1 or (debit[1]=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2) and debit[0]=1 |- inn -> ;
+  (debit[1]=0 and 1<=level and level<=3 and debit[2]=0 or debit[1]=0 and level=3 and debit[2]=1 or debit[1]=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and 1<=level and level<=2 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=1 and level=2 and debit[2]=2) and debit[0]=1 or (debit[1]=0 and level=1 and 0<=debit[2] and debit[2]<=1 or debit[1]=1 and level=1 and debit[2]=2) and debit[0]=2 |- ndd -> ;
+  (debit[1]=0 and 1<=level and level<=3 and debit[2]=0 or debit[1]=0 and level=3 and debit[2]=1 or debit[1]=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and 1<=level and level<=2 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=1 and level=2 and debit[2]=2) and debit[0]=1 or (debit[1]=0 and level=1 and 0<=debit[2] and debit[2]<=1 or debit[1]=1 and level=1 and debit[2]=2) and debit[0]=2 |- ndi -> ;
+  ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and 2<=level and level<=3) and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or (debit[1]=1 and level=2 or 0<=debit[1] and debit[1]<=1 and level=3) and debit[2]=2) and debit[0]=0 or ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and level=2) and debit[2]=0 or (debit[1]=1 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=1 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2) and debit[0]=1 or (0<=debit[1] and debit[1]<=1 and level=1 and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and level=2) and debit[2]=1 or (debit[1]=1 and level=1 or debit[1]=0 and level=2) and debit[2]=2) and debit[0]=2 |- ndn -> ;
+  (debit[1]=0 and 1<=level and level<=3 and debit[2]=0 or debit[1]=0 and level=3 and debit[2]=1 or debit[1]=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and 1<=level and level<=2 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=1 and level=2 and debit[2]=2) and debit[0]=1 or (debit[1]=0 and level=1 and 0<=debit[2] and debit[2]<=1 or debit[1]=1 and level=1 and debit[2]=2) and debit[0]=2 |- nid -> ;
+  (debit[1]=0 and 1<=level and level<=3 and debit[2]=0 or debit[1]=0 and level=3 and debit[2]=1 or debit[1]=1 and level=3 and debit[2]=2) and debit[0]=0 or (debit[1]=0 and 1<=level and level<=2 and debit[2]=0 or debit[1]=0 and level=2 and debit[2]=1 or debit[1]=1 and level=2 and debit[2]=2) and debit[0]=1 or (debit[1]=0 and level=1 and 0<=debit[2] and debit[2]<=1 or debit[1]=1 and level=1 and debit[2]=2) and debit[0]=2 |- nii -> ;
+  ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and 2<=level and level<=3) and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or (debit[1]=1 and level=2 or 0<=debit[1] and debit[1]<=1 and level=3) and debit[2]=2) and debit[0]=0 or ((0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and level=2) and debit[2]=0 or (debit[1]=1 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=1 or (0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=2) and debit[0]=1 or (0<=debit[1] and debit[1]<=1 and level=1 and debit[2]=0 or (0<=debit[1] and debit[1]<=1 and level=1 or debit[1]=0 and level=2) and debit[2]=1 or (debit[1]=1 and level=1 or debit[1]=0 and level=2) and debit[2]=2) and debit[0]=2 |- nin -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or (1<=debit[1] and debit[1]<=2 and level=2 or 0<=debit[1] and debit[1]<=1 and level=3) and debit[2]=2) and debit[0]=0 or ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=0 or (1<=debit[1] and debit[1]<=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=1 or (debit[1]=2 and level=1 or level=2 or debit[1]=0 and level=3) and debit[2]=2) and debit[0]=1 or (0<=debit[1] and debit[1]<=1 and level=1 and debit[2]=0 or level=1 and debit[2]=1 or (1<=debit[1] and debit[1]<=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=2) and debit[0]=2 |- nnd -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=1 or (1<=debit[1] and debit[1]<=2 and level=2 or 0<=debit[1] and debit[1]<=1 and level=3) and debit[2]=2) and debit[0]=0 or ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=0 or (1<=debit[1] and debit[1]<=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=1 or (debit[1]=2 and level=1 or level=2 or debit[1]=0 and level=3) and debit[2]=2) and debit[0]=1 or (0<=debit[1] and debit[1]<=1 and level=1 and debit[2]=0 or level=1 and debit[2]=1 or (1<=debit[1] and debit[1]<=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=2) and debit[0]=2 |- nni -> ;
+  ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2 or debit[1]=0 and level=3) and debit[2]=0 or (debit[1]=2 and level=1 or level=2 or debit[1]=0 and level=3) and debit[2]=1 or (level=2 or 0<=debit[1] and debit[1]<=1 and level=3) and debit[2]=2) and debit[0]=0 or ((level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=0 or (1<=debit[1] and debit[1]<=2 and level=1 or level=2) and debit[2]=1 or (debit[1]=2 and level=1 or level=2 or debit[1]=0 and level=3) and debit[2]=2) and debit[0]=1 or (0<=debit[1] and debit[1]<=1 and level=1 and debit[2]=0 or (level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=1 or (1<=debit[1] and debit[1]<=2 and level=1 or 0<=debit[1] and debit[1]<=1 and level=2) and debit[2]=2) and debit[0]=2 |- nnn -> ;
+edon
+
+node SystemCtrl1
+     sub
+            C : Ctrl1;
+            T : Tank;
+            V : Valve[3]; // 0 et 1 : vannes amont, 2 : vanne aval
+    assert
+        T.input = (V[0].debit+V[1].debit);
+              T.output = V[2].debit;
+/*Controller observations */
+        C.debit[0] = V[0].debit;
+        C.debit[1] = V[1].debit;
+        C.debit[2] = V[2].debit;
+        C.level= T.levelWater;
+    state
+        ctrl : bool;
+    init
+        ctrl := true;
+    event
+        cmd, env;
+    trans
+ctrl |- cmd -> ctrl := false;
+~ctrl |- env -> ctrl := true;
+    sync
+		<C.ddd, cmd, V[0].dec, V[1].dec, V[2].dec>;
+		<C.ddi, cmd, V[0].dec, V[1].dec, V[2].inc>;
+		<C.ddn, cmd, V[0].dec, V[1].dec>;
+		<C.did, cmd, V[0].dec, V[1].inc, V[2].dec>;
+		<C.dii, cmd, V[0].dec, V[1].inc, V[2].inc>;
+		<C.din, cmd, V[0].dec, V[1].inc>;
+		<C.dnd, cmd, V[0].dec, V[2].dec>;
+		<C.dni, cmd,  V[0].dec, V[2].inc>;
+		<C.dnn, cmd, V[0].dec>;
+		<C.idd, cmd, V[0].inc, V[1].dec, V[2].dec>;
+		<C.idi ,cmd, V[0].inc, V[1].dec, V[2].inc>;
+		<C.idn, cmd, V[0].inc, V[1].dec>;
+		<C.iid, cmd, V[0].inc, V[1].inc, V[2].dec>;
+		<C.iii, cmd, V[0].inc, V[1].inc, V[2].inc>;
+		<C.iin, cmd, V[0].inc, V[1].inc>;
+		<C.ind, cmd, V[0].inc, V[2].dec>;
+		<C.ini, cmd, V[0].inc, V[2].inc>;
+		<C.inn , cmd, V[0].inc>;
+		<C.ndd , cmd, V[1].dec, V[2].dec>;
+        <C.ndi , cmd, V[1].dec, V[2].inc>;
+        <C.ndn , cmd, V[1].dec>;
+            <C.nid , cmd, V[1].inc, V[2].dec>;
+        <C.nii , cmd, V[1].inc, V[2].inc>;
+            <C.nin , cmd, V[1].inc>;
+        <C.nnd , cmd, V[2].dec>;
+        <C.nni , cmd, V[2].inc>;
+        <C.nnn , cmd>;
+        <env, T.time>;
+edon

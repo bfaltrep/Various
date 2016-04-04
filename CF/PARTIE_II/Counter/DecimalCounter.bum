@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="cpt1,cpt2,cpt3≔0,0,0" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="CounterSpecification"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="cpt1 ∈ 0‥9 ∧ cpt2 ∈ 0‥9 ∧ cpt3 ∈ 0‥9"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="cpt1"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="cpt2"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="cpt3"/>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INC1">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="cpt1&lt;9 ∧ cpt2=9 ∧ cpt3=9"/>
+<org.eventb.core.refinesEvent name="(" org.eventb.core.target="INC"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="cpt1,cpt2,cpt3≔cpt1+1,0,0" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="3" org.eventb.core.target="MyCounterSpecification"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv4" org.eventb.core.predicate="cpt = cpt1∗100 + cpt2∗10 + cpt3"/>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INC2">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="INC"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="cpt2,cpt3≔cpt2+1,0" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="cpt2&lt;9 ∧ cpt3=9"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INC3">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="INC"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="cpt3≔cpt3+1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="cpt3&lt;9"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RESET">
+<org.eventb.core.action name="'" org.eventb.core.assignment="cpt1,cpt2,cpt3≔0,0,0" org.eventb.core.label="act1"/>
+<org.eventb.core.refinesEvent name="*" org.eventb.core.target="RESET"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="cpt1 &gt; 0 ∨ cpt2 &gt; 0 ∨ cpt3 &gt; 0"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

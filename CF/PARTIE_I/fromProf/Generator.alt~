@@ -1,0 +1,10 @@
+node Generator
+  flow   plus, minus : [0,1];
+  state  on : bool : public;
+  init   on := true;
+  event  failure, repair;
+  trans  on |- failure -> on := false;
+         ~on |- repair -> on := true;
+  assert plus = 1;
+         on = (minus = 0);
+edon

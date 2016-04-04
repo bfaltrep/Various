@@ -1,0 +1,2 @@
+Const  LastLevel = 3;
+Domain Levels = [0,LastLevel];

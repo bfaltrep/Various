@@ -1,0 +1,8 @@
+node PoolOfJobs
+  state nbJobs : [0,2] : public; 
+  init  nbJobs := 0;
+  event put, get;
+  trans 
+    true |- put -> nbJobs := nbJobs + 1;
+    true |- get -> nbJobs := nbJobs - 1;
+edon

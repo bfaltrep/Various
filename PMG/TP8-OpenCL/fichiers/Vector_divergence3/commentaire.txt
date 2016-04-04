@@ -1,0 +1,87 @@
+./vector 4
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1048576 Threads in workgroups of 4
+	Computation performed in 1819.930000 µs over device #0
+	Computed '901120/1048576' correct values!
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1048576 Threads in workgroups of 4
+	Computation performed in 11303.940000 µs over device #0
+	Computed '901120/1048576' correct values!
+
+--------------------------
+
+./vector 8
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1048576 Threads in workgroups of 8
+	Computation performed in 1559.770000 µs over device #0
+	Computed '901120/1048576' correct values!
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1048576 Threads in workgroups of 8
+	Computation performed in 5882.700000 µs over device #0
+	Computed '901120/1048576' correct values!
+
+--------------------------
+
+./vector 16
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1048576 Threads in workgroups of 16
+	Computation performed in 1372.130000 µs over device #0
+	Computed '901120/1048576' correct values!
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1048576 Threads in workgroups of 16
+	Computation performed in 3004.250000 µs over device #0
+	Computed '901120/1048576' correct values!
+
+--------------------------
+
+./vector 32
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1048576 Threads in workgroups of 32
+	Computation performed in 1295.920000 µs over device #0
+	Computed '901120/1048576' correct values!
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1048576 Threads in workgroups of 32
+	Computation performed in 1695.600000 µs over device #0
+	Computed '901120/1048576' correct values!
+
+-------------------------- MEILLEUR (pr nous)
+
+./vector 64
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1048576 Threads in workgroups of 64
+	Computation performed in 1188.140000 µs over device #0
+	Computed '901120/1048576' correct values!
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1048576 Threads in workgroups of 64
+	Computation performed in 1149.550000 µs over device #0
+	Computed '901120/1048576' correct values!

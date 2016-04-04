@@ -1,0 +1,10 @@
+node CircuitV1_OK
+  sub    G : Generator;
+         S : Switch;
+         L : Lamplight
+  assert S.f1 = G.plus;
+         L.f1 = S.f2;
+         L.f2 = G.minus;
+         // the switch must be oriented
+         (S.f2=1) => S.on;
+edon

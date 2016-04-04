@@ -1,0 +1,242 @@
+Ajout du calcul
+----------------
+
+./addmat 4 4
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 4x4
+	Computation performed in 523.300000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 633.860000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 4x4
+	Computation performed in 1729.040000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 621.480000 µs over one cpu
+
+
+----------------
+
+./addmat 8 8
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 8x8
+	Computation performed in 328.490000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 626.880000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 8x8
+	Computation performed in 515.500000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 633.270000 µs over one cpu
+
+
+---------------- MEILLEURS PERF ----------------
+
+./addmat 16 16
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 16x16
+	Computation performed in 212.760000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 656.210000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 16x16
+	Computation performed in 310.630000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 673.590000 µs over one cpu
+
+----------------
+
+./addmat 32 32
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 32x32
+	Computation performed in 230.660000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 625.380000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 32x32
+	Computation performed in 369.370000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 650.040000 µs over one cpu
+
+----------------
+
+./addmat 256 1
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 256x1
+	Computation performed in 193.770000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 629.340000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 256x1
+	Computation performed in 278.920000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 620.820000 µs over one cpu
+
+----------------
+
+./addmat 128 2
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 128x2
+	Computation performed in 156.250000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 784.450000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 128x2
+	Computation performed in 278.730000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 602.850000 µs over one cpu
+
+----------------
+
+./addmat 64 4
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 64x4
+	Computation performed in 228.140000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 586.480000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 64x4
+	Computation performed in 275.090000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 621.910000 µs over one cpu
+
+----------------
+
+./addmat 32 8
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 32x8
+	Computation performed in 202.520000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 607.230000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 32x8
+	Computation performed in 281.390000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 626.420000 µs over one cpu
+
+----------------
+
+./addmat 8 32
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 8x32
+	Computation performed in 370.310000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 607.010000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 8x32
+	Computation performed in 474.340000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 622.940000 µs over one cpu
+
+----------------
+
+./addmat 4 64
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 4x64
+	Computation performed in 677.150000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 617.740000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 4x64
+	Computation performed in 818.740000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 661.190000 µs over one cpu
+
+----------------
+
+./addmat 1 256
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 1x256
+	Computation performed in 2957.980000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 684.680000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 1x256
+	Computation performed in 3014.110000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 604.180000 µs over one cpu
+
+----------------
+
+./addmat 128 2
+
+2 OpenCL platforms detected
+Platform 0: Intel(R) OpenCL - Intel(R) Corporation
+nb devices = 1
+	Device 0 : CPU [      Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz]
+	1024x1024 Threads in workgroups of 128x2
+	Computation performed in 210.440000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 638.860000 µs over one cpu
+Platform 1: NVIDIA CUDA - NVIDIA Corporation
+nb devices = 1
+	Device 0 : GPU [Quadro K2000]
+	1024x1024 Threads in workgroups of 128x2
+	Computation performed in 278.510000 µs over device #0
+	Computed '1048576/1048576' correct values!
+	Computation performed in 666.750000 µs over one cpu

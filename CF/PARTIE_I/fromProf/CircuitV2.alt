@@ -1,0 +1,15 @@
+node CircuitV2
+  sub    G : Generator;
+         S : Switch;
+         L : Lamplight
+  state  safe : bool;   init safe := false;
+  event  begin, repair, end;
+  trans  ~safe & ~G.on |- begin -> safe := true;
+         safe          |- repair ->;
+         safe & G.on   |- end -> safe := false;
+  sync   <repair, G.repair>;
+  assert ~safe => (S.f1 = G.plus);
+         safe => (S.f1 = 0);
+         L.f1 = S.f2;
+         L.f2 = G.minus;
+edon

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.carrierSet name="." org.eventb.core.identifier="Usager"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="fonction" org.eventb.core.predicate="priorite ∈ Usager → ℕ"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="fonction2" org.eventb.core.predicate="veut_descendre ∈ Usager → BOOL"/>
+</org.eventb.core.contextFile>

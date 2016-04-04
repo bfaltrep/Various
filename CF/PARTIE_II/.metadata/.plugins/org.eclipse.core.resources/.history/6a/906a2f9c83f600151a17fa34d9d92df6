@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="array" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="size" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="arraz" org.eventb.core.predicate="array∈1 ‥ size → ℤ" org.eventb.core.source="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="arra{" org.eventb.core.predicate="size∈ℕ1" org.eventb.core.source="/ArraySearchMinMax/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="arra|" org.eventb.core.predicate="size=5" org.eventb.core.source="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="arra}" org.eventb.core.predicate="array(1)=5" org.eventb.core.source="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="arra~" org.eventb.core.predicate="array(2)=2" org.eventb.core.source="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="arrb'" org.eventb.core.predicate="array(3)=3" org.eventb.core.source="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="arrb(" org.eventb.core.predicate="array(4)=6" org.eventb.core.source="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="arrb)" org.eventb.core.predicate="array(5)=4" org.eventb.core.source="/ArraySearchMinMax/MyArray.buc|org.eventb.core.contextFile#MyArray|org.eventb.core.axiom#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="i_max" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="i_min" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTALLHYPMyArra\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTALLHYPMyArra\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMyArra|" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="i_min'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="i_max'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMyArra|" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTIDENTMyArra\|" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="FOUND_MIN_MAX/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTHYPMyArra}("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ size⇒i∈dom(array)∧array∈ℤ ⇸ ℤ∧maximum∈dom(array)" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTHYPMyArra}("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="FOUND_MIN_MAX/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTHYPMyArra})"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ size⇒i∈dom(array)∧array∈ℤ ⇸ ℤ∧minimum∈dom(array)" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTHYPMyArra})"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="FOUND_MIN_MAX/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTALLHYPMyArra}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="minimum∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#("/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poSequent#FOUND_MIN_MAX\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="FOUND_MIN_MAX/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTALLHYPMyArra}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="maximum∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#("/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poSequent#FOUND_MIN_MAX\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMyArra}" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="minimum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="maximum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="i_min'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="i_max'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMyArra}(" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTIDENTMyArra}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="minimum∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="maximum∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMyArra})" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTHYPMyArra}(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ size⇒array(i)≤array(maximum)" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMyArra}" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#EVTHYPMyArra})" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ size⇒array(i)≥array(minimum)" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.event#(|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ArraySearchMinMax/ArrayMinMaxSpec.bpo|org.eventb.core.poFile#ArrayMinMaxSpec|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i_min∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="i_max∈1 ‥ size" org.eventb.core.source="/ArraySearchMinMax/ArrayMinMaxSpec.bum|org.eventb.core.machineFile#ArrayMinMaxSpec|org.eventb.core.invariant#\/"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

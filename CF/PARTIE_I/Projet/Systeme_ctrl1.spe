@@ -1,0 +1,54 @@
+with SystemCtrl1 do
+
+    deadlock := any_s  - src(any_t - self_epsilon);
+
+    tr_deadlock := trace(initial, any_t, deadlock);
+
+    notResetable := any_s - coreach(initial, any_t);
+
+    tr_notResetable := trace(initial, any_t, notResetable);
+
+    /* Niveaux critiques et Situations redoutées */
+
+    NC := any_s & [T.levelWater=0 | T.levelWater = nbSensors]; 
+
+    SR := deadlock | NC;
+
+    /* La production */
+
+    out0 := [T.output = 0];
+
+    out1 := [T.output = 1];
+
+    out2 := [T.output = 2];
+
+
+    /* Système d'équations au point fixe
+
+
+     * CGagnant = (any_s - SR) & src(CCoupGagnant);
+
+     * CCoupGagnant = CCoup & rtgt(EPerdant);
+
+     * EPerdant = (any_s - SR) & (src(ECoupPerdant) - src(ECoupNonPerdant));
+
+     * ECoupPerdant = ECoup & rtgt(CGagnant);
+
+     * ECoupNonPerdant = ECoup & rtgt(any_s - CGagnant):
+
+
+     */
+
+    CCoup := any_t & label cmd;
+
+    ECoup := any_t & label env;
+
+    CCoupGagnant -= CCoup & rtgt((any_s - SR) & (src(ECoup & rtgt((any_s - SR) & src(CCoupGagnant))) - src(ECoup & rtgt(any_s - ((any_s - SR) & src(CCoupGagnant))))));
+
+
+with System do
+    /* Projection du controleur*/
+
+    project(any_s, (empty_t, CCoupGagnant), 'CTRL1', true, C)> 'Ctrl1.alt';
+
+done

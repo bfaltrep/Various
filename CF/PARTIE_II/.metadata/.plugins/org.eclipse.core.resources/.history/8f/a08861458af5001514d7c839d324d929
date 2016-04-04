@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.constant name="'" org.eventb.core.identifier="capacite_max"/>
+<org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="capacite_max ∈ ℕ"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm2" org.eventb.core.predicate="est_a_l_arret ∈ 0‥1"/>
+<org.animb.valuation.value name="+" org.eventb.core.expression="" org.eventb.core.identifier="est_a_l_arret"/>
+<org.animb.valuation.value name="," org.eventb.core.expression="" org.eventb.core.identifier="nb_usagers_dedans"/>
+</org.eventb.core.contextFile>

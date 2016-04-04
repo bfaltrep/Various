@@ -1,0 +1,10 @@
+node Lamplight
+  flow  f1, f2 : [0,1];
+  state on, ok : bool;
+  init  ok := true;
+  event reaction;
+  trans 
+    ok & (f1=1&f2=1)  |- reaction -> ok:=false, 
+                                     on:=false;
+    ok & (on=(f1=f2)) |- reaction -> on:=~on;
+edon

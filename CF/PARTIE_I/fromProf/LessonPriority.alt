@@ -1,0 +1,31 @@
+node LessonPriority
+ sub  T : Teacher;
+      S : Student[3];
+ event pr012 > {pr01,pr02,pr12};
+       pr01 > {pr0, pr1};
+       pr02 > {pr0, pr2};
+       pr12 > {pr1, pr2};
+       pr < {pr0, pr1, pr2};
+       st01 > {st0, st1};
+       st02 > {st0, st2};
+       st12 > {st1, st2};
+       st < {st0, st1, st2};
+ trans 
+  true |- pr012,pr01,pr02,pr12,pr0,pr1,pr2,pr -> ;
+  true |-       st01,st02,st12,st0,st1,st2,st -> ;
+ sync <pr012,T.speaks,S[0].listen,S[1].listen,S[2].listen>;
+      <pr01, T.speaks,S[0].listen,S[1].listen>;
+      <pr02, T.speaks,S[0].listen,S[2].listen>;
+      <pr12, T.speaks,S[1].listen,S[2].listen>;
+      <pr0,  T.speaks,S[0].listen>;
+      <pr1,  T.speaks,S[1].listen>;
+      <pr2,  T.speaks,S[2].listen>;
+      <pr, T.speaks>;
+      <st01, T.paper,S[0].write,S[1].write>;
+      <st02, T.paper,S[0].write,S[2].write>;
+      <st12, T.paper,S[1].write,S[2].write>;
+      <st0,  T.paper,S[0].write>;
+      <st1,  T.paper,S[1].write>;
+      <st2,  T.paper,S[2].write>;
+      <st, T.paper>;
+edon

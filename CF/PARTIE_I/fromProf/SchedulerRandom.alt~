@@ -1,0 +1,3 @@
+node SchedulerRandom
+  sub PJ1, PJ2, PJ3 : PoolOfJobs;
+edon

@@ -1,0 +1,39 @@
+\documentclass[A4wide]{article}
+\usepackage[french]{babel}
+\usepackage[latin9]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{fullpage}
+\title{OpenMP}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Deux tâches}
+Modifiez le programme \texttt{deux-taches.c} pour qu'il exécute deux tâches en parallèle : chaque
+tâche écrira un mot et le numéro du thread qui l'exécute.
+
+\section{For en tâches}
+Modifiez le programme \texttt{for-en-taches.c} afin que les indices
+soient distribués au moyen de tâches tout en conservant un
+comportement globalement similaire.
+
+
+\section{Taskwait}
+Analyser le comportement du programme \texttt{task-wait.c}. Pour
+simplifier, on pourra lancer ce programme avec 4 threads.
+
+
+\section{Tâches et durée de vie des variables locales}
+Expliquez le comportement du programme \texttt{task.c} pour les
+trois cas suivants :
+\begin{enumerate}
+\item taskwait et nowait commentés; 
+\item taskwait décommenté et nowait commenté;
+\item taskwait commenté et nowait décommenté.
+\end{enumerate}
+
+\section{TSP}
+Poursuivre et terminer le TP sur le voyageur de commerce.
+\end{document}

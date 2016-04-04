@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="maxValue" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="maxValuf" org.eventb.core.predicate="maxValue∈ℕ1" org.eventb.core.source="/Counter/CounterContext.buc|org.eventb.core.contextFile#CounterContext|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="maxValug" org.eventb.core.predicate="maxValue=999" org.eventb.core.source="/Counter/MyCounterSpecification.buc|org.eventb.core.contextFile#MyCounterSpecification|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cpt" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt3" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="cpt4" org.eventb.core.predicate="cpt∈0 ‥ maxValue" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.invariant#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9∧0∈0 ‥ 9∧0∈0 ‥ 9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0∗100+0∗10+0" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMyCounterSpecificatior" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cpt3'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMyCounterSpecificatior" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTIDENTMyCounterSpecificatior" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="INC1/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt1+1∈0 ‥ 9∧0∈0 ‥ 9∧0∈0 ‥ 9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC1\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INC1/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt+1=(cpt1+1)∗100+0∗10+0" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC1\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INC1/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt&lt;maxValue" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC1\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMyCounterSpecificatios" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cpt3'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMyCounterSpecificatios" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTIDENTMyCounterSpecificatios" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt1&lt;9∧cpt2=9∧cpt3=9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INC2/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt1∈0 ‥ 9∧cpt2+1∈0 ‥ 9∧0∈0 ‥ 9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC2\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INC2/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt+1=cpt1∗100+(cpt2+1)∗10+0" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC2\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INC2/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt&lt;maxValue" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC2\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMyCounterSpecificatiot" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cpt3'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMyCounterSpecificatiot" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTIDENTMyCounterSpecificatiot" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt2&lt;9∧cpt3=9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#6|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INC3/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt1∈0 ‥ 9∧cpt2∈0 ‥ 9∧cpt3+1∈0 ‥ 9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC3\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INC3/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt+1=cpt1∗100+cpt2∗10+(cpt3+1)" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC3\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INC3/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt&lt;maxValue" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#INC3\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMyCounterSpecificatiou" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cpt3'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMyCounterSpecificatiou" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTIDENTMyCounterSpecificatiou" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt3&lt;9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="RESET/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9∧0∈0 ‥ 9∧0∈0 ‥ 9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#RESET\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="RESET/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0∗100+0∗10+0" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#RESET\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="RESET/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTALLHYPMyCounterSpecificatiov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt&gt;0" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/CounterSpecification.bum|org.eventb.core.machineFile#CounterSpecification|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poSequent#RESET\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMyCounterSpecificatiov" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cpt3'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cpt2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMyCounterSpecificatiov" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#EVTIDENTMyCounterSpecificatiov" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt1&gt;0∨cpt2&gt;0∨cpt3&gt;0" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Counter/DecimalCounter.bpo|org.eventb.core.poFile#DecimalCounter|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt1∈0 ‥ 9∧cpt2∈0 ‥ 9∧cpt3∈0 ‥ 9" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cpt=cpt1∗100+cpt2∗10+cpt3" org.eventb.core.source="/Counter/DecimalCounter.bum|org.eventb.core.machineFile#DecimalCounter|org.eventb.core.invariant#4"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

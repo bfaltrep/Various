@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/ArraySearch/Array.bcc|org.eventb.core.scContextFile#Array" org.eventb.core.source="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="Array">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="val∈ℤ" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="size∈ℕ1" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="array∈1 ‥ size → ℤ" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="array" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.scConstant name="size" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#)" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="val" org.eventb.core.source="/ArraySearch/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="Arraz" org.eventb.core.label="trie" org.eventb.core.predicate="∀i⦂ℤ·∀j⦂ℤ·i∈1 ‥ size∧j∈1 ‥ size∧i≤j⇒array(i)≤array(j)" org.eventb.core.source="/ArraySearch/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+</org.eventb.core.scContextFile>

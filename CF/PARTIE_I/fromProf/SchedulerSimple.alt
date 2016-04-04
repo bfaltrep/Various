@@ -1,0 +1,14 @@
+node SchedulerSimple
+  state  nb1, nb2, nb3 : [0,2];
+  init   nb1:=0, nb2 := 0, nb3 := 0;
+  event  put1, put2, put3,
+         get1, get2, get3;
+  trans  true |- put1 -> nb1 := nb1+1;
+         true |- put2 -> nb2 := nb2+1;
+         true |- put3 -> nb3 := nb3+1;
+         true |- get1 -> nb1 := nb1-1;
+         nb1=0 |- get2 -> nb2 := nb2-1;
+         nb1=0 & nb2 = 0 |- get3 -> nb3 := nb3-1;
+edon
+      
+ 

@@ -1,0 +1,8 @@
+node Switch
+  state  on : bool : public;
+  init   on := true;
+  flow   f1, f2 : [0,1];
+  event  push; 
+  trans  true  |- push   -> on := ~on;
+  assert on => (f1=f2);
+edon

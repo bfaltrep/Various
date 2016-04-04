@@ -1,0 +1,13 @@
+node Student
+  state present, havePencil : bool;
+  init  present:=false, havePencil:=true;
+  event in_out, listen, write;
+  trans present  |- in_out -> present:=false,
+                              havePencil:=true;
+        ~present |- in_out -> present:=true,
+                              havePencil:=true;
+        ~present |- in_out -> present:=true,
+                              havePencil:=false;
+        present  |- listen -> ;
+        present & havePencil |- write -> ;
+edon

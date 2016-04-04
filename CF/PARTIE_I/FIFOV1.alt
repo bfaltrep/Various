@@ -1,0 +1,7 @@
+node FIFOV1
+	state nbMessages : [0,2]; init nbMessages:=0;
+	event put, get;
+	trans
+		nbMessages<2 |- put -> nbMessages:=nbMessages+1;
+		nbMessages>0 |- get -> nbMessages:=nbMessages-1;
+edon

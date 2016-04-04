@@ -1,0 +1,218 @@
+node Minimal
+edon
+node FIFO_V1
+  state nbMessages : [0,2]; init nbMessages:=0;
+  event put, get;
+  trans 
+    nbMessages<2 |- put -> nbMessages:=nbMessages+1;
+    nbMessages>0 |- get -> nbMessages:=nbMessages-1;
+edon
+node FIFO_V2
+  state nbMessages : [0,2]; init nbMessages:=0;
+  event put, get;
+  trans 
+    true |- put -> nbMessages:=nbMessages+1;
+    true |- get -> nbMessages:=nbMessages-1;
+edon
+node Switch
+  state  on : bool : public;
+  init   on := true;
+  flow   f1, f2 : [0,1];
+  event  push; 
+  trans  true  |- push   -> on := ~on;
+  assert on => (f1=f2);
+edon
+node Generator
+  flow   plus, minus : [0,1];
+  state  on : bool : public;
+  init   on := true;
+  event  failure, repair;
+  trans  on |- failure -> on := false;
+         ~on |- repair -> on := true;
+  assert plus = 1;
+         on = (minus = 0);
+edon
+node Lamplight
+  flow  f1, f2 : [0,1];
+  state on, ok : bool;
+  init  ok := true;
+  event reaction;
+  trans 
+    ok & (f1=1&f2=1)  |- reaction -> ok:=false, 
+                                     on:=false;
+    ok & (on=(f1=f2)) |- reaction -> on:=~on;
+edon
+node CircuitV1
+  sub    G : Generator;
+         S : Switch;
+         L : Lamplight
+  assert S.f1 = G.plus;
+         L.f1 = S.f2;
+         L.f2 = G.minus;
+edon
+node CircuitV2
+  sub    G : Generator;
+         S : Switch;
+         L : Lamplight
+  state  safe : bool;   init safe := false;
+  event  begin, repair, end;
+  trans  ~safe & ~G.on |- begin -> safe := true;
+         safe          |- repair ->;
+         safe & G.on   |- end -> safe := false;
+  sync   <repair, G.repair>;
+  assert ~safe => (S.f1 = G.plus);
+         safe => (S.f1 = 0);
+         L.f1 = S.f2;
+         L.f2 = G.minus;
+edon
+node CircuitV1_OK
+  sub    G : Generator;
+         S : Switch;
+         L : Lamplight
+  assert S.f1 = G.plus;
+         L.f1 = S.f2;
+         L.f2 = G.minus;
+         // the switch must be oriented
+         (S.f2=1) => S.on;
+edon
+node PoolOfJobs
+  state nbJobs : [0,2] : public; 
+  init  nbJobs := 0;
+  event put, get;
+  trans 
+    true |- put -> nbJobs := nbJobs + 1;
+    true |- get -> nbJobs := nbJobs - 1;
+edon
+node SchedulerRandom
+  sub PJ1, PJ2, PJ3 : PoolOfJobs;
+edon
+node SchedulerPriority
+  sub    PJ1, PJ2, PJ3 : PoolOfJobs;
+  event  run1, run2, run3;
+  trans  true |- run1 -> ;
+         PJ1.nbJobs=0 |- run2 -> ;
+         PJ1.nbJobs=0 & PJ2.nbJobs=0 |- run3 -> ;
+  sync   <run1, PJ1.get>;
+         <run2, PJ2.get>;
+         <run3, PJ3.get>;
+edon
+node Scheduler
+  sub    PJ1, PJ2, PJ3 : PoolOfJobs;
+  event  run1 > run2;
+         run2 > run3;
+  trans  true |- run1 -> ;
+         true |- run2 -> ;
+         true |- run3 -> ;
+  sync   <run1, PJ1.get>;
+         <run2, PJ2.get>;
+         <run3, PJ3.get>;
+edon
+node Teacher
+  state present : bool;
+  init  present := false;
+  event in_out, speaks, paper;
+  trans true |- in_out -> present:=~present;
+        present |- speaks, paper -> ;
+edon
+node Student
+  state present, havePencil : bool;
+  init  present:=false, havePencil:=true;
+  event in_out, listen, write;
+  trans present  |- in_out -> present:=false,
+                              havePencil:=true;
+        ~present |- in_out -> present:=true,
+                              havePencil:=true;
+        ~present |- in_out -> present:=true,
+                              havePencil:=false;
+        present  |- listen -> ;
+        present & havePencil |- write -> ;
+edon
+node LessonDifficult
+ sub  T : Teacher;
+      S1, S2, S3 : Student;
+ sync 
+  <T.speaks,S1.listen,S2.listen,S3.listen>;
+  <T.paper,S1.write,S2.write>;
+  <T.paper,S1.write,S3.write>;
+  <T.paper,S2.write,S3.write>;
+edon
+node LessonUnpleasant
+ sub  T : Teacher;
+      S1, S2, S3 : Student;
+ sync <T.speaks,S1.listen,S2.listen,S3.listen>;
+      <T.speaks,S1.listen,S2.listen>;
+      <T.speaks,S1.listen,S3.listen>;
+      <T.speaks,S2.listen,S3.listen>;
+      <T.speaks,S1.listen>;
+      <T.speaks,S2.listen>;
+      <T.speaks,S3.listen>;
+      <T.speaks>;
+      <T.paper,S1.write,S2.write>;
+      <T.paper,S1.write,S3.write>;
+      <T.paper,S2.write,S3.write>;
+      <T.paper,S1.write>;
+      <T.paper,S2.write>;
+      <T.paper,S3.write>;
+      <T.paper>;
+edon
+node LessonPriority
+ sub  T : Teacher;
+      S1, S2, S3 : Student;
+ event pr123 > {pr12,pr13,pr23};
+       pr12 > {pr1, pr2};
+       pr13 > {pr1, pr3};
+       pr23 > {pr2, pr3};
+       pr_0 < {pr1, pr2, pr3};
+       st12 > {st1, st2};
+       st13 > {st1, st3};
+       st23 > {st2, st3};
+       st_0 < {st1, st2, st3};
+ trans 
+  true |- pr123,pr12,pr13,pr23,pr1,pr2,pr3,pr_0 -> ;
+  true |-       st12,st13,st23,st1,st2,st3,st_0 -> ;
+ sync <pr123,T.speaks,S1.listen,S2.listen,S3.listen>;
+      <pr12, T.speaks,S1.listen,S2.listen>;
+      <pr13, T.speaks,S1.listen,S3.listen>;
+      <pr23, T.speaks,S2.listen,S3.listen>;
+      <pr1,  T.speaks,S1.listen>;
+      <pr2,  T.speaks,S2.listen>;
+      <pr3,  T.speaks,S3.listen>;
+      <pr_0, T.speaks>;
+      <st12, T.paper,S1.write,S2.write>;
+      <st13, T.paper,S1.write,S3.write>;
+      <st23, T.paper,S2.write,S3.write>;
+      <st1,  T.paper,S1.write>;
+      <st2,  T.paper,S2.write>;
+      <st3,  T.paper,S3.write>;
+      <st_0, T.paper>;
+edon
+node Lesson
+ sub  T : Teacher;
+      S1, S2, S3 : Student;
+ sync 
+  <T.speaks,S1.listen?,S2.listen?,S3.listen?>;
+  <T.paper,S1.write?,S2.write?,S3.write?> <=2;
+edon
+Const  LastLevel = 3;
+Domain Levels = [0,LastLevel];
+// A comment that stops at the end of the line
+
+/* A 5 lines comment.
+ * No imbrication
+ *
+ *
+*/
+node A
+  state a : bool;
+edon
+node B
+  sub A1 : A;
+  state b : bool;
+  init b:= true, A1.a := false;
+edon
+node C
+  sub A2 : A;
+      B1 : B;
+  state c : bool;
+  init A2.a := true, B1.b := false, B1.A1.a := true;
+edon

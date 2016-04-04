@@ -1,0 +1,45 @@
+1
+
+--- make
+
+premier-code-8191 17239.980469 ms
+
+seq-with-depend-8191-32 time = 25699.726ms
+
+with-depend-8191-32 time = 4533.282ms
+with-depend-8191-32-FT time = 3687.265ms
+
+worker-8191-32 time = 3690.829ms
+worker-8191-32-FT time = 2924.805ms
+
+--- make P=24 GRAIN=32 DIM=8191
+
+premier-code-8191 17203.746094 ms
+
+seq-with-depend-8191-32 time = 27090.451ms
+
+with-depend-8191-32 time = 4498.859ms
+with-depend-8191-32-FT time = 3784.774ms
+
+worker-8191-32 time = 3938.387ms
+worker-8191-32-FT time = 2915.929ms
+
+--- make P=24 GRAIN=32 DIM=2047
+
+premier-code-2047 1117.373047 ms
+
+premier-code-8191 17200.642578 ms
+
+
+seq-with-depend-2047-32 time = 1960.393ms
+seq-with-depend-8191-32 time = 25730.854ms
+
+with-depend-2047-32 time = 677.189ms
+with-depend-2047-32-FT time = 654.605ms
+with-depend-8191-32 time = 4508.300ms
+with-depend-8191-32-FT time = 3739.271ms
+make
+worker-2047-32 time = 251.496ms
+worker-2047-32-FT time = 250.036ms
+worker-8191-32 time = 3672.578ms
+worker-8191-32-FT time = 2865.328ms

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="n, i ≔ 0, ∅" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ARRET_DU_BUS"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DEMARRAGE_DU_BUS"/>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MONTEE_D_UN_USAGER"/>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DESCENTE_D_UN_USAGER"/>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ARRIVEE_D_UN_USAGER"/>
+<org.eventb.core.variable name="var3" org.eventb.core.identifier="max ∈ N"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="i ∈ 1‥max → Usager"/>
+<org.eventb.core.seesContext name="4" org.eventb.core.target="Usagers"/>
+<org.eventb.core.seesContext name="5" org.eventb.core.target="MonBus"/>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="descendent ∈ Usager → BOOL"/>
+<org.eventb.core.variable name="var1" org.eventb.core.identifier="sontDescendus ∈ Usager → BOOL"/>
+<org.eventb.core.variable name="var2" org.eventb.core.identifier="descendent ∈ Usager → BOOL"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv1" org.eventb.core.predicate="⊤"/>
+</org.eventb.core.machineFile>

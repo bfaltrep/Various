@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="bus_a_l_arret ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_usagers_a_l_arret ≔ 0 " org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="compteur_usagers_a_l_arret ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Bus"/>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="Usager"/>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ARRET_DU_BUS">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_a_l_arret = 0 ∧ compteur = 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="bus_a_l_arret ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DEMARRAGE_DU_BUS">
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_a_l_arret = 1"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="bus_a_l_arret ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="nb_usagers_a_l_arret = 0 ∨ nb_usagers_dans_le_bus = capacite_max"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="," org.eventb.core.identifier="bus_a_l_arret"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="bus_a_l_arret ∈ 0‥1"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="nb_usagers_dans_le_bus"/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="nb_usagers_a_l_arret"/>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MONTEE_DES_USAGERS">
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_a_l_arret = 1"/>
+<org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="nb_usagers_dans_le_bus &lt; capacite__max"/>
+<org.eventb.core.action name="grd3" org.eventb.core.assignment="nb_usagers_dans_le_bus += 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DESCENTE_DES_USAGERS">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_a_l_arret = 1"/>
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd2" org.eventb.core.predicate="nb_usagers_dans_le_bus &gt; 0"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="nb_usagers_dans_le_bus −= 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ARRIVEE_D_UN_USAGER">
+<org.eventb.core.action name="(" org.eventb.core.assignment="compteur_usagers_a_l_arret += 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="usagers_a_l_arret(compteur_usagers)" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="usagers_dans_le_bus"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="usagers_a_l_arret"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv2" org.eventb.core.predicate="nb_usagers_dans_le_bus ∈ 0‥capacite_max"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv2" org.eventb.core.predicate="nb_usagers_a_l_arret ∈ 0‥max_usagers"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv3" org.eventb.core.predicate="usagers_dans_le_bus ∈ 0‥capacite_max → Usager"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="inv4" org.eventb.core.predicate="usagers_a_l_arret ∈ 0‥max_usagers → Usager"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv5" org.eventb.core.predicate="nb_usagers_dans_le_bus + nb_usagers_a_l_arret ≤ max_usagers"/>
+<org.eventb.core.variable name="inv2" org.eventb.core.identifier="compteur_usagers_a_l_arret"/>
+<org.eventb.core.invariant name="inv3" org.eventb.core.label="inv6" org.eventb.core.predicate="compteur_usagers_a_l_arret ∈ 0‥capacite_max"/>
+</org.eventb.core.machineFile>

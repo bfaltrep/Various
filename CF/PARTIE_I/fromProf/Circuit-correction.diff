@@ -1,0 +1,6 @@
+d1 1
+a1 1
+node CircuitV1_OK
+a7 2
+         // the switch must be oriented
+         (S.f2=1) => S.on;

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ex2&apos; to &apos;ArraySearch&apos;" description="Rename resource &apos;ex2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ex2" name="ArraySearch" stamp="1456932648141" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;counter&apos; to &apos;Counter&apos;" description="Rename resource &apos;counter&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/counter" name="Counter" stamp="1456934893519" updateReferences="true"/>
+</session>

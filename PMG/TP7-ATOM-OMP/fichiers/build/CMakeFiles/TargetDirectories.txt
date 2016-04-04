@@ -1,0 +1,2 @@
+/net/cremi/bfaltrep/M1/PMG/TP7-ATOM-OMP/fichiers/build/CMakeFiles/atoms.dir
+/net/cremi/bfaltrep/M1/PMG/TP7-ATOM-OMP/fichiers/build/libsotl/CMakeFiles/sotl.dir

@@ -1,0 +1,7 @@
+node Teacher
+  state present : bool;
+  init  present := false;
+  event in_out, speaks, paper;
+  trans true |- in_out -> present:=~present;
+        present |- speaks, paper -> ;
+edon
