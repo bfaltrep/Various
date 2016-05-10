@@ -25,7 +25,7 @@ typedef bool echequier[DIM][DIM];
 
 void print_e(echequier e)
 {
-	for (int i = 0; i < 3 + 0 * DIM; ++i){
+	for (int i = 0; i < DIM/*3 + 0 * DIM*/; ++i){
 		for (int j = 0; j < DIM; ++j)
 			printf(" %d ",e[i][j]);
 		printf("\n");
